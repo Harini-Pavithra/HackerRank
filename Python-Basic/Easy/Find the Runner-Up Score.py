@@ -20,7 +20,7 @@ Sample Output 0
 
 5
 
-Code: 
+Solution 1: 
   
 if __name__ == '__main__':
     n = int(raw_input())
@@ -31,4 +31,25 @@ if __name__ == '__main__':
 print(new_array[-2])
 
 Time complexity of the code: 
-  List comprehension: n*n = n <sup>2</sup>
+  List comprehension: n*n = n^2
+  Sort: n*logn
+  Therefore, n^2+n*logn = O(n^2)
+  
+  Solution 2:
+    
+ if __name__ == '__main__':
+    n = int(raw_input())
+    arr = map(int, raw_input().split())
+    maxium = max(arr)
+    count = arr.count(maxium)
+    for values in range(0,count):
+        arr.remove(maxium)
+    print(max(arr))
+
+ Time complexity of Solution 2:
+  Max function = n
+  Count funtion = n
+  for loop runs for count(c) times
+  Therefore, n+n+c = O(n+c)
+  
+  
